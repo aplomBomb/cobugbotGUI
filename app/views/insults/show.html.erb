@@ -1,3 +1,6 @@
 <h1>Insult # <%= @insult.id %> </h1>
 <h3> <%= @insult.phrase %> </h3>
 <h4> Contributed by:<strong> <%= @insult.contributor %> </strong> </h4>
+
+<%= link_to 'Remove', @insult, method: :delete, data: { confirm: 'Are you sure you want to delete this insult?' } %>
+

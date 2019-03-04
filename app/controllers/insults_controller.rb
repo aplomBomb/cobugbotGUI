@@ -29,6 +29,13 @@ class InsultsController < ApplicationController
     redirect_to insult_path(@insult)
   end
 
+  def destroy
+    @insult = Insult.find(params[:id])
+    @insult.destroy
+
+    redirect_to insults_path
+  end
+
   private
 
   def insult_params
