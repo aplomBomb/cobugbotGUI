@@ -1,0 +1,5 @@
+<ul>
+    <% @insults.each do |insult| %>
+        <li> <%= link_to insult.phrase, insult_path(insult)%> </li> 
+    <% end %>
+</ul>
