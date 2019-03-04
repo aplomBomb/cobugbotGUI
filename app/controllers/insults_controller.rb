@@ -4,6 +4,7 @@ class InsultsController < ApplicationController
   end
 
   def show
+    @insult = Insult.find(params[:id])
   end
 
   def new
