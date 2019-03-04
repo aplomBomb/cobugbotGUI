@@ -1,2 +1,7 @@
-<h1>Insults#edit</h1>
-<p>Find me in app/views/insults/edit.html.erb</p>
+<h1>Edit an insult</h1>
+<%= form_with model: @insult do |form| %>
+  <%= form.text_area :phrase, placeholder: "Insult..." %>
+  <%= form.text_field :contributor, placeholder: "Your name/handle" %>
+
+  <%= form.submit %>
+<% end %>
