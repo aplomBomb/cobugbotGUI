@@ -1,5 +1,10 @@
-<ul>
-    <% @insults.each do |insult| %>
-        <li> <%= link_to insult.phrase, insult_path(insult)%> </li> 
-    <% end %>
-</ul>
+<% @insult_number = 1 %>
+
+<div class="divFlex">
+    <ul class="insultList">
+        <% @insults.each do |insult| %>
+            <li class="insultListItem"> <%= @insult_number %> <%= link_to insult.phrase, insult_path(insult)%> </li> 
+            <% @insult_number += 1 %>
+        <% end %>
+    </ul>
+</div>
