@@ -2,9 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.divFlex {
+.divFlexHome {
     display: flex;
     justify-content: center;
+}
+
+.headerFloat {
+    float: left;
+}
+
+.homeGrass {
+    z-index: 3;
+    position: absolute;
+    bottom: -1%;
+    width: 100vw;
+}
+
+#homePikaBefore {
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    bottom: -75%;
+    transition-timing-function: ease-out;
+    transition-duration: 2.5s;
+}
+#homePikaAfter {
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    bottom: 8%;
+    transition-timing-function: ease-out;
+    transition-duration: 2.5s;
+}
+
+.homeTree {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
 }
 
 .insultList {

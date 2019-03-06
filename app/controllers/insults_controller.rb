@@ -1,4 +1,7 @@
 class InsultsController < ApplicationController
+  def home
+
+  end
   def index
     @insults = Insult.all
   end
