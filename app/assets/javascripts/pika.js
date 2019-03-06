@@ -11,7 +11,7 @@ function pikaLower() {
 
 function pikaFlip() {
     document.getElementById("homePikaLowered1").setAttribute('id', 'homePikaLowered2');
-    setTimeout(pikaRaise2, 4000);
+    setTimeout(pikaRaise2, 6000);
 }
 
 function pikaRaise2() {
