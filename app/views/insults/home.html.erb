@@ -1,16 +1,18 @@
-<div id="homeContainerFocused">
-    <div class="divFlexHome" id="scene">   
-        <div data-depth="0.6">
-            <%= image_tag ("tree.jpeg"), class: "homeTree"%>    
+<div id="homeContainer">
+    <div class="divFlexHome">   
+        <div class="test">   
             <%= image_tag ("pikachu.png"), id: "homePikaLowered1"%>    
-            <%= image_tag ("grass.png"), class: "homeGrass"%>
+            <%= image_tag ("grassResized2.png"), class: "homeGrass"%>
         </div>
             
     </div>
 
-    
+    <%= image_tag ("tree.jpeg"), class: "homeTree"%> 
     <%= image_tag ("cobugbotPoke.png"), id: "cobugbotPokeSmall"%>    
     <%= image_tag ("confettiAlpha.gif"), id: "confettiTrans"%>
 </div>
 <a href="/insults" class="button" id="insultsButtonStart">Insults</a>
+
+<%= javascript_include_tag('pika.js') %>
+<%= javascript_include_tag('introText.js') %>
 

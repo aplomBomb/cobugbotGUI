@@ -10,5 +10,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
+Rails.application.config.assets.precompile += %w( spacePika.js )
+Rails.application.config.assets.precompile += %w( pika.js )
+Rails.application.config.assets.precompile += %w( introText.js )
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
