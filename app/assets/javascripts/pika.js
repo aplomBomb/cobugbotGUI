@@ -1,11 +1,11 @@
 function pikaRaise() {
     document.getElementById("homePikaLowered1").setAttribute('id', 'homePikaRaised1');
-    setTimeout(pikaLower, 16000);
+    setTimeout(pikaLower, 5000);
 }
 
 function pikaLower() {
     document.getElementById("homePikaRaised1").setAttribute('id', 'homePikaLowered1');
-    setTimeout(pikaFlip, 9000);
+    setTimeout(pikaFlip, 2000);
 
 }
 
@@ -16,17 +16,17 @@ function pikaFlip() {
 
 function pikaRaise2() {
     document.getElementById("homePikaLowered2").setAttribute('id', 'homePikaRaised2');
-    setTimeout(pikaLower2, 22000);
+    setTimeout(pikaLower2, 4000);
 }
 
 function pikaLower2() {
     document.getElementById("homePikaRaised2").setAttribute('id', 'homePikaLowered2');
-    setTimeout(pikaFlip2, 12000);
+    setTimeout(pikaFlip2, 2000);
 }
 
 function pikaFlip2() {
     document.getElementById("homePikaLowered2").setAttribute('id', 'homePikaLowered1');
-    setTimeout(pikaRaise, 5000);
+    setTimeout(pikaRaise, 4000);
 }
 
 setTimeout(pikaRaise, 2200);
