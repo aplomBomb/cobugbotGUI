@@ -5,7 +5,8 @@
     <div class="insultsContainer">
         <ul class="insultList">
             <% @insults.each do |insult| %>
-                <li class="insultListItem pokemonFont"> <%= @insult_number %> <%= link_to insult.phrase, insult_path(insult), class: 'pokemonFont' %> </li> 
+                <li class="insultListItem jediFont"> <%= @insult_number %> <%= link_to insult.phrase, insult_path(insult), class: 'jediFont' %> </li> 
+                <hr align= "left" class= "divider"></hr>
                 <% @insult_number += 1 %>
             <% end %>
         </ul>

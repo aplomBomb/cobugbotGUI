@@ -22,7 +22,7 @@ class InsultsController < ApplicationController
 
   def edit
     @insult = Insult.find(params[:id])
-    
+    render :edit
   end
 
   def update

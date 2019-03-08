@@ -1,7 +1,9 @@
-<h1>Edit an insult</h1>
-<%= form_with model: @insult do |form| %>
-  <%= form.text_area :phrase, placeholder: "Insult..." %>
-  <%= form.text_field :contributor, placeholder: "Your name/handle" %>
+<div id="editFlex">
+  <%= form_with model: @insult do |form| %>
+    <%= form.text_area :phrase, class: "textArea", placeholder: "Insult..." %>
+    <%= form.text_field :contributor, placeholder: "Your name/handle" %>
 
-  <%= form.submit %>
-<% end %>
+    <%= form.submit %>
+  <% end %>
+</div>
+
