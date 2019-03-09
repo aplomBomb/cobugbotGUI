@@ -1,7 +1,7 @@
-function showHome() {
+(function () {
     document.getElementById('homeContainerTrans').setAttribute('id', 'homeContainerOpaque');
     setTimeout(blowUpToCenter, 1000);
-}
+})();
 
 function blowUpToCenter() {
     document.getElementById("cobugbotPokeSmall").setAttribute("id", "cobugbotPokeBig");
@@ -11,5 +11,3 @@ function blowUpToCenter() {
 function launchFireworks() {
     document.getElementById('confettiTrans').setAttribute('id', 'confettiOpaque');
 }
-
-setTimeout(showHome, 1);
