@@ -47,6 +47,7 @@
     opacity: 1;
     position: fixed;
     transition-duration: 1s;
+    perspective: 1000px;
 }
 
 .test {
@@ -75,7 +76,7 @@
 
 #cobugbotPokeBig {
     opacity: 100;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     top: 12vh;
     left: 25vw;
@@ -160,38 +161,60 @@
     list-style-type: none;
 }
 
-#insultsButtonStart {
-    opacity: 0;
-    z-index: 3;
+#homeInviteSignStart {
+    opacity: 1;
+    z-index: 2;
+    transform-style: preserve-3d;
     font-size: 3rem;
     position: absolute;
-    bottom: 30vh;
-    right: 45vw;
-    background-color: yellow;
-    transition-timing-function: ease-in-out;
+    top: -50vh;
+    left: 5vw;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+}
+#homeInviteSignFinish {
+    opacity: 1;
+    z-index: 2;
+    transform-style: preserve-3d;
+    font-size: 3rem;
+    position: absolute;
+    top: -10vh;
+    left: 5vw;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+}
+
+#homeInviteSign {
+    width: 15vw;
+}
+#insultsButtonStart {
+    opacity: 1;
+    z-index: 2;
+    transform: rotateX(720deg);
+    transform-style: preserve-3d;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 120vh;
+    right: 75vw;
+    transition-timing-function: linear;
     transition-duration: 0.8s;
 }
 #insultsButtonFinish {
     opacity: 100;
     z-index: 3;
+    transform-style: preserve-3d;
     font-size: 3rem;
     position: absolute;
-    bottom: 30vh;
-    right: 45vw;
-    background-color: yellow;
-    transition-timing-function: ease-in-out;
+    bottom: 0;
+    right: 40vw;
+    transition-timing-function: linear;
     transition-duration: 0.8s;
 }
 
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    background-color: yellow;
-    color: black;
+#homeWoodSign {
+    width: 15vw;
 }
+
 
 // End of home view elements
 
@@ -212,7 +235,7 @@ a.button {
 }
 #indexContainerOpaque {
     opacity: 1;
-    display: flex;
+    display: flex; 
     height: 100vh;
     width: 100vw;
     min-width: 0;

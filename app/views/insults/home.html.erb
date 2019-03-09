@@ -3,6 +3,8 @@
         <div class="test">   
             <%= image_tag ("pikachu.png"), id: "homePikaLowered1"%>    
             <%= image_tag ("grassResized2.png"), class: "homeGrass"%>
+            <a href="/insults" class="button" id="insultsButtonStart" onclick="homeFadeOut()" ><%= image_tag ("woodSign.png"), id: "homeWoodSign"%></a>
+            <a href="https://discordbots.org/bot/525382819808280597" class="button" id="homeInviteSignStart"><%= image_tag ("hangingSign.png"), id: "homeInviteSign"%></a>
         </div>
             
     </div>
@@ -10,7 +12,8 @@
     <%= image_tag ("tree.jpeg"), class: "homeTree"%> 
     <%= image_tag ("cobugbotPoke.png"), id: "cobugbotPokeSmall"%>    
     <%= image_tag ("confettiAlpha.gif"), id: "confettiTrans"%>
-    <a href="/insults" class="button" id="insultsButtonStart" onclick="homeFadeOut()" >Insults</a>
+    
+    
 </div>
 
 
@@ -23,5 +26,5 @@
         document.getElementById('homeContainerOpaque').setAttribute('id', 'homeContainerTrans');
     }
 
-</script>
+</script> 
 
