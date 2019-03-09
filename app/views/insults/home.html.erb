@@ -1,4 +1,4 @@
-<div id="homeContainer">
+<div id="homeContainerTrans">
     <div class="divFlexHome">   
         <div class="test">   
             <%= image_tag ("pikachu.png"), id: "homePikaLowered1"%>    
@@ -10,9 +10,18 @@
     <%= image_tag ("tree.jpeg"), class: "homeTree"%> 
     <%= image_tag ("cobugbotPoke.png"), id: "cobugbotPokeSmall"%>    
     <%= image_tag ("confettiAlpha.gif"), id: "confettiTrans"%>
+    <a href="/insults" class="button" id="insultsButtonStart" onclick="homeFadeOut()" >Insults</a>
 </div>
-<a href="/insults" class="button" id="insultsButtonStart">Insults</a>
+
 
 <%= javascript_include_tag('pika.js') %>
 <%= javascript_include_tag('introText.js') %>
+
+<script>
+
+    function homeFadeOut() {
+        document.getElementById('homeContainerOpaque').setAttribute('id', 'homeContainerTrans');
+    }
+
+</script>
 

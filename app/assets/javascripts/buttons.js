@@ -1,5 +1,5 @@
-function raiseIndexButton() {
+function showIndexButton() {
     document.getElementById("insultsButtonStart").setAttribute("id", "insultsButtonFinish");
 }
 
-setTimeout(raiseIndexButton, 3000);
+setInterval(showIndexButton, 5000);

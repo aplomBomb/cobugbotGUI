@@ -1,20 +1,30 @@
 <% @insult_number = 1 %>
 
 
-<div id="indexContainer">
+<div id="indexContainerTrans">
     <div class="insultsContainer">
         <ul class="insultList">
             <% @insults.each do |insult| %>
-                <li class="insultListItem jediFont"> <%= @insult_number %> <%= link_to insult.phrase, insult_path(insult), class: 'jediFont' %> </li> 
+                <li class="insultListItem jediFont" onclick="indexFadeOut()"> <%= @insult_number %> <%= link_to insult.phrase, insult_path(insult), class: 'jediFont' %> </li> 
                 <hr align= "left" class= "divider"></hr>
                 <% @insult_number += 1 %>
             <% end %>
+            <li class="insultListItem jediFont"> <a href="/insults/new" class="jediFont" onclick="indexFadeOut()"> Add a new insult... </a> </li> 
         </ul>
     </div>
     <%= image_tag ("spacePikachu.png"), id: "spacePika1"%> 
+    <a href="/"  id="indexHomeButton" onclick="indexFadeOut()">HOME</a>
 </div>   
 
-
-
 <!-- View Specific Javascript -->
+
+<script>
+
+function indexFadeOut() {
+    document.getElementById('indexContainerOpaque').setAttribute('id', 'indexContainerTrans');
+}
+
+</script>
+
 <%= javascript_include_tag('spacePika.js') %>
+<%= javascript_include_tag('indexFadeIn.js') %>
