@@ -363,3 +363,56 @@
     width: 25vw;
     height: 10vh;
 }
+
+// Media Queries 
+
+@media (orientation: portrait) {
+    .homeGrass {
+        opacity: 1;
+        position: absolute;
+        bottom: 10vh;
+        width: 100vw;
+    }
+    .homeTree {
+        opacity: 0;
+    }   
+    #portraitSky {
+        background-image: image_url('sky.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    #homeInviteSignFinish {
+        top: 0vh;
+        
+    }
+    #homePikaRaised1 {
+        bottom: 16%;
+    }
+    #homePikaRaised2 {
+        bottom: 14%;
+    }
+    #cobugbotPokeBig {
+        top: 25vh;
+        width: 80vw;
+        left: 10vw;
+    }
+    #confettiOpaque {
+        opacity: 100;
+        top: 18vh;
+        left: 5vw;
+        width: 90vw;
+        z-index: 1;
+    }
+    #homeInviteSign {
+        width: 35vw;
+    }
+    #homeWoodSign {
+        width: 35vw;
+    }
+    #insultsButtonFinish {
+        right: 30vw;
+        bottom: 10vh;
+    }
+}
