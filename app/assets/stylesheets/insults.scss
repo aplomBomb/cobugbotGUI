@@ -50,10 +50,6 @@
     perspective: 1000px;
 }
 
-.test {
-    background-image: image-url('space.jpg');
-}
-
 .divFlexHome {
     display: flex;
     justify-content: center;
@@ -229,28 +225,41 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-    background-image: image-url('space.jpg');
     position: fixed;
-    transition-duration: 2s;
+    transition-duration: .3s;
 }
 #indexContainerOpaque {
     opacity: 1;
     display: flex; 
     height: 100vh;
     width: 100vw;
-    min-width: 0;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    background-image: image-url('space.jpg');
     position: fixed;
     transition-duration: 1s;
+    padding: 0;
+    margin: 0;
+}
+
+#spaceDiv {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+#space {
+    width: 100vw;
 }
 
 #indexHomeButton {
+    z-index: 7;
     position: absolute;
     bottom: 5vh;
     left: 2vw;
+    text-decoration: none;
+    font-size: 2.5rem;
 }
 
 .insultList {
@@ -271,6 +280,7 @@
 }
 
 .insultsContainer {
+    z-index: 6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,41 +291,39 @@
 
 #spacePika1 {
     z-index: 5;
-    transform: rotate(180deg) scaleX(-1);
+    transform: scaleX(-1);
     position: absolute;
-    right: 80vw;
-    bottom: 108vh;
-    width: 18vw;
+    right: 10vw;
+    bottom: 40vh;
+    width: .5vw;
     transition-timing-function: linear;
-    transition-duration: 1.5s;
+    transition-duration: 2s;
 }
 #spacePika2 {
     z-index: 5;
-    transform: rotate(180deg) scaleX(-1);
+    transform: scaleX(-1);
     position: absolute;
-    right: 80vw;
-    bottom: 80vh;
-    width: 18vw;
+    right: 115vw;
+    bottom: 70vh;
+    width: 75vw;
     transition-timing-function: linear;
-    transition-duration: 1.5s;
+    transition-duration: 2s;
 }
 #spacePika3 {
-    z-index: 5;
-    transform: rotate(270deg) scaleX(-1);
+    z-index: 5;;
     position: absolute;
-    right: -8vw;
-    bottom: 60vh;
-    width: 18vw;
+    right: 115vw;
+    bottom: 90vh;
+    width: 75vw;
     transition-timing-function: linear;
-    transition-duration: 1.5s;
+    transition-duration: .2s;
 }
 #spacePika4 {
     z-index: 5;
-    transform: rotate(-180deg) scaleX(-1);
     position: absolute;
-    right: 5vw;
-    bottom: 80vh;
-    width: 18vw;
+    right: -50vw;
+    bottom: 0vh;
+    width: .5vw;
     transition-timing-function: linear;
     transition-duration: 2s;
 }
@@ -414,5 +422,9 @@
     #insultsButtonFinish {
         right: 30vw;
         bottom: 10vh;
+    }
+    #space {
+        height: 100vh;
+        transform: rotate(90deg);
     }
 }

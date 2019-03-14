@@ -4,7 +4,7 @@ function spaceWalk1() {
         setTimeout(spaceWalk2, 8000);
     } catch (error) {
         console.log(error);
-        setTimeout(spaceWalk2, 500);
+        setTimeout(spaceWalk2, 8000);
     }
 }
 
