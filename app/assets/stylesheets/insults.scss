@@ -5,8 +5,8 @@
 // Pokemon-Styled Font
 
 .divider {
-    height: .5vh;
-    background-color: blue;
+    height: .2vh;
+    background-color: black;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     font-family: 'Jedi';
     color: yellow;
     line-height: 3rem;
-    font-size: 2vw;
+    font-size: 1.8rem;
     text-decoration: none;
     text-shadow:
 		-2.5px -2.5px 0 black,
@@ -253,19 +253,34 @@
     width: 100vw;
 }
 
+#earthSpace {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
 #indexHomeButton {
     z-index: 7;
     position: absolute;
-    bottom: 5vh;
+    bottom: 1vh;
     left: 2vw;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
+}
+#indexNewButton {
+    z-index: 7;
+    position: absolute;
+    bottom: 1vh;
+    right: 2vw;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .insultList {
     overflow-y: auto;
-    height: 75vh;
-    width: 50vw;
+    height: 100%;
+    width: 100%;
+    padding: 0;
 }
 
 .insultListItem {
@@ -280,12 +295,13 @@
 }
 
 .insultsContainer {
+    display: flex;
     z-index: 6;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 75vh;
+    width: 75vw;
     overflow: hidden;
 }
 
@@ -373,12 +389,12 @@
 }
 
 // Media Queries 
-
+    // Home View Media Queries 
 @media (orientation: portrait) {
     .homeGrass {
         opacity: 1;
         position: absolute;
-        bottom: 10vh;
+        bottom: 0vh;
         width: 100vw;
     }
     .homeTree {
@@ -396,10 +412,10 @@
         
     }
     #homePikaRaised1 {
-        bottom: 16%;
+        bottom: 5%;
     }
     #homePikaRaised2 {
-        bottom: 14%;
+        bottom: 3%;
     }
     #cobugbotPokeBig {
         top: 25vh;
@@ -408,7 +424,7 @@
     }
     #confettiOpaque {
         opacity: 100;
-        top: 18vh;
+        bottom: 3vh;
         left: 5vw;
         width: 90vw;
         z-index: 1;
@@ -421,10 +437,34 @@
     }
     #insultsButtonFinish {
         right: 30vw;
-        bottom: 10vh;
+        bottom: 1vh;
     }
+
+        // Index View Media Queries
+
     #space {
-        height: 100vh;
-        transform: rotate(90deg);
+        display: none;
     }
+
+    #earthSpace {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+    }
+
+    .jediFont {
+        font-size: 2rem;
+    }
+
+    .insultsContainer {
+        position: absolute;
+        top: 0;
+        width: 95vw;
+        height: 90vh;
+    }
+    
 }
+
+// Show View Styles
+

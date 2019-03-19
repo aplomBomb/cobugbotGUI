@@ -9,15 +9,16 @@
                 <hr align= "left" class= "divider"></hr>
                 <% @insult_number += 1 %>
             <% end %>
-            <li class="insultListItem jediFont"> <a href="/insults/new" class="jediFont" onclick="indexFadeOut()"> Add a new insult... </a> </li> 
         </ul>
     </div>
     <%= image_tag ("spacePikachu.png"), id: "spacePika1"%> 
     <div id="spaceDiv">
         <%= image_tag ("space.svg"), id: "space"%> 
+        <%= image_tag ("earthSpace.jpg"), id: "earthSpace"%> 
     </div>
         
     <a href="/"  id="indexHomeButton" class="jediFont" onclick="indexFadeOut()">Go Back</a>
+    <a href="/insults/new" id="indexNewButton" class="jediFont" onclick="indexFadeOut()"> Add new </a>
 </div>   
 
 <!-- View Specific Javascript --> 
