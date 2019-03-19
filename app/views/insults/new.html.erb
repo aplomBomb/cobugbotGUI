@@ -1,8 +1,22 @@
-<%= form_with model: @insult do |form| %>
-  <%= form.text_area :phrase, placeholder: "Insult..." %>
-  <%= form.text_field :contributor, placeholder: "Your name..." %>
+<div id="newViewDivTrans">
+  <div id="newFormDiv">
+    <%= form_with model: @insult do |form| %>
+      <%= form.text_area :phrase, placeholder: "Insult..." %>
+      <%= form.text_field :contributor, placeholder: "Your name...", id: "contributorTextField" %>
 
-  <%= form.submit %>
-<% end %>
+      <%= form.submit id: "addNewInsultButton" %>
+    <% end %>
+  </div>
+  <a href="/insults" id="newViewBackButton" onClick="newFadeOut()">Go Back</a>
+</div>
+
+<script>
+  function newFadeOut() {
+    document.getElementById('newViewDivOpaque').setAttribute('id', 'newViewDivTrans');
+  }
+</script>
+
+<%= javascript_include_tag('newFadeIn.js') %>
+
 
 

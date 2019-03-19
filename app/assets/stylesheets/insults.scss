@@ -19,7 +19,7 @@
 .jediFont {
     font-family: 'Jedi';
     color: yellow;
-    line-height: 3rem;
+    line-height: 2rem;
     font-size: 1.8rem;
     text-decoration: none;
     text-shadow:
@@ -91,7 +91,7 @@
 }
 
 #confettiOpaque {
-    opacity: 100;
+    opacity: 1;
     position: absolute;
     top: 12vh;
     left: 32vw;
@@ -153,14 +153,10 @@
     width: 100vw;  
 }
 
-.insultList {
-    list-style-type: none;
-}
-
 #homeInviteSignStart {
     opacity: 1;
-    z-index: 2;
-    transform-style: preserve-3d;
+    z-index: 5;
+    
     font-size: 3rem;
     position: absolute;
     top: -50vh;
@@ -170,8 +166,8 @@
 }
 #homeInviteSignFinish {
     opacity: 1;
-    z-index: 2;
-    transform-style: preserve-3d;
+    z-index: 5;
+    
     font-size: 3rem;
     position: absolute;
     top: -10vh;
@@ -181,6 +177,7 @@
 }
 
 #homeInviteSign {
+    z-index: 5;
     width: 15vw;
 }
 #insultsButtonStart {
@@ -216,6 +213,10 @@
 
 // Elements of Index view
 
+.insultList {
+    list-style-type: none;
+}
+
 #indexContainerTrans {
     opacity: 0;
     display: flex;
@@ -226,7 +227,7 @@
     justify-content: center;
     justify-items: center;
     position: fixed;
-    transition-duration: .3s;
+    transition-duration: 1s;
 }
 #indexContainerOpaque {
     opacity: 1;
@@ -388,6 +389,73 @@
     height: 10vh;
 }
 
+// Elements of New View
+
+#newViewDivTrans {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    background-color: #36393e;
+    transition-duration: 1s;
+}
+#newViewDivOpaque {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    background-color: #36393e;
+    transition-duration: 1s;
+}
+
+#newFormDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    width: 75vw;
+}
+
+#newFormDiv textArea {
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+}
+
+#newFormDiv #contributorTextField {
+    width: 50%;
+    font-size: 1.3rem;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 2vh;
+}
+
+#newFormDiv #addNewInsultButton {
+    color: black;
+    border: white ;
+    font-size: 2rem;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 2vh;
+    justify-self: center;
+}
+
+#newViewBackButton {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 1vh;
+    font-size: 2rem;
+    right: 1vw;
+}
+
 // Media Queries 
     // Home View Media Queries 
 @media (orientation: portrait) {
@@ -398,6 +466,8 @@
         width: 100vw;
     }
     .homeTree {
+        position: absolute;
+        right: 150vw;
         opacity: 0;
     }   
     #portraitSky {
@@ -418,18 +488,19 @@
         bottom: 3%;
     }
     #cobugbotPokeBig {
-        top: 25vh;
+        top: 35vh;
         width: 80vw;
         left: 10vw;
     }
     #confettiOpaque {
         opacity: 100;
-        bottom: 3vh;
+        top: 25vh;
         left: 5vw;
         width: 90vw;
         z-index: 1;
     }
     #homeInviteSign {
+        z-index: 5;
         width: 35vw;
     }
     #homeWoodSign {

@@ -14,5 +14,6 @@ Rails.application.config.assets.precompile += %w( spacePika.js )
 Rails.application.config.assets.precompile += %w( pika.js )
 Rails.application.config.assets.precompile += %w( introText.js )
 Rails.application.config.assets.precompile += %w( indexFadeIn.js )
+Rails.application.config.assets.precompile += %w( newFadeIn.js )
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
