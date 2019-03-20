@@ -1,9 +1,19 @@
-<div id="editFlex">
-  <%= form_with model: @insult do |form| %>
-    <%= form.text_area :phrase, class: "textArea", placeholder: "Insult..." %>
-    <%= form.text_field :contributor, placeholder: "Your name/handle" %>
+<div id="newEditViewDivTrans">
+  <div id="newEditFormDiv">
+    <%= form_with model: @insult do |form| %>
+      <%= form.text_area :phrase, placeholder: "Insult..." %>
+      <%= form.text_field :contributor, placeholder: "Your name...", id: "contributorTextField" %>
 
-    <%= form.submit %>
-  <% end %>
+      <%= form.submit id: "addNewInsultButton" %>
+    <% end %>
+  </div>
+  <a href="/insults" id="newEditViewBackButton" onClick="newEditFadeOut()">Go Back</a>
 </div>
 
+<script>
+  function newFadeOut() {
+    document.getElementById('newEditViewDivOpaque').setAttribute('id', 'newEditViewDivTrans');
+  }
+</script>
+
+<%= javascript_include_tag('newEditFadeIn.js') %>

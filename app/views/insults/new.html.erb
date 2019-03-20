@@ -1,22 +1,22 @@
-<div id="newViewDivTrans">
-  <div id="newFormDiv">
+<div id="newEditViewDivTrans">
+  <div id="newEditFormDiv">
     <%= form_with model: @insult do |form| %>
       <%= form.text_area :phrase, placeholder: "Insult..." %>
       <%= form.text_field :contributor, placeholder: "Your name...", id: "contributorTextField" %>
 
-      <%= form.submit id: "addNewInsultButton" %>
+      <%= form.submit id: "addNewEditInsultButton" %>
     <% end %>
   </div>
-  <a href="/insults" id="newViewBackButton" onClick="newFadeOut()">Go Back</a>
+  <a href="/insults" id="newEditViewBackButton" onClick="newFadeOut()">Go Back</a>
 </div>
 
 <script>
   function newFadeOut() {
-    document.getElementById('newViewDivOpaque').setAttribute('id', 'newViewDivTrans');
+    document.getElementById('newEditViewDivOpaque').setAttribute('id', 'newEditViewDivTrans');
   }
 </script>
 
-<%= javascript_include_tag('newFadeIn.js') %>
+<%= javascript_include_tag('newEditFadeIn.js') %>
 
 
 

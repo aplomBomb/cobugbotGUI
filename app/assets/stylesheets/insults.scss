@@ -1,8 +1,3 @@
-// Place all the styles related to the insults controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-// Pokemon-Styled Font
 
 .divider {
     height: .2vh;
@@ -364,6 +359,8 @@
     transition-duration: 1.5s;
 }
 
+// End of Index elements
+
 // Elements of Show View 
 
 #showFlex {
@@ -373,25 +370,11 @@
     justify-content: center;
 }
 
-//Elements of Edit View
+// End of Show elements
 
-#editFlex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
+// Elements of New and Edit views
 
-.textArea {
-    width: 25vw;
-    height: 10vh;
-}
-
-// Elements of New View
-
-#newViewDivTrans {
+#newEditViewDivTrans {
     opacity: 0;
     display: flex;
     align-items: center;
@@ -402,7 +385,7 @@
     background-color: #36393e;
     transition-duration: 1s;
 }
-#newViewDivOpaque {
+#newEditViewDivOpaque {
     opacity: 1;
     display: flex;
     align-items: center;
@@ -414,22 +397,23 @@
     transition-duration: 1s;
 }
 
-#newFormDiv {
+#newEditFormDiv {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 80vh;
     width: 75vw;
 }
 
-#newFormDiv textArea {
+#newEditFormDiv textArea {
     width: 100%;
+    height: 100%;
     font-size: 1.5rem;
     border-radius: 3%;
     box-shadow: 1px 1px 2px yellow;
 }
 
-#newFormDiv #contributorTextField {
+#newEditFormDiv #contributorTextField {
     width: 50%;
     font-size: 1.3rem;
     border-radius: 3%;
@@ -437,7 +421,7 @@
     margin-top: 2vh;
 }
 
-#newFormDiv #addNewInsultButton {
+#newEditFormDiv #addNewEditInsultButton {
     color: black;
     border: white ;
     font-size: 2rem;
@@ -447,7 +431,7 @@
     justify-self: center;
 }
 
-#newViewBackButton {
+#newEditViewBackButton {
     color: white;
     text-decoration: none;
     position: absolute;
@@ -456,8 +440,12 @@
     right: 1vw;
 }
 
-// Media Queries 
-    // Home View Media Queries 
+// End of New and Edit views
+
+// Media Queries ==========================
+
+// Home View Media Queries 
+
 @media (orientation: portrait) {
     .homeGrass {
         opacity: 1;

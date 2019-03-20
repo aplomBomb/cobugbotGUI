@@ -17,7 +17,12 @@ class InsultsController < ApplicationController
   def create
     insult = Insult.create(insult_params)
 
-    redirect_to insults_path
+    if insult.save
+      redirect_to insults_path
+    else
+      render 'new'
+    end
+
   end
 
   def edit
@@ -29,7 +34,12 @@ class InsultsController < ApplicationController
     @insult = Insult.find(params[:id])
     @insult.update(insult_params)
 
-    redirect_to insult_path(@insult)
+    if @insult.save
+      redirect_to insults_path
+    else
+      render 'edit'
+    end
+
   end
 
   def destroy
