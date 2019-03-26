@@ -363,9 +363,26 @@
 
 // Elements of Show View 
 
-#showFlex {
+#showContainerTrans {
+    opacity: 0;
     display: flex;
+    transition-duration: 1s;
     flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #36393e;
+    align-items: center;
+    justify-content: center;
+}
+
+#showContainerOpaque {
+    opacity: 100;
+    display: flex;
+    transition-duration: 1s;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #36393e;
     align-items: center;
     justify-content: center;
 }
