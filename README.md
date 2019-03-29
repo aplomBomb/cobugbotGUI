@@ -15,7 +15,7 @@
 _If you want to clone the repository into a directory named something other than cobugbotgui, you can specify the new directory name as an additional argument:_
 `git clone https://github.com/aplomBomb/cobugbotGUI.git someCoolDirectoryName`
 
-**3. Run the command `bundle install`**
+**3. Navigate to your cloned directory and run the command `bundle install`**
 
 **4. Once finished you can simply enter `rails s` to fire up the development server.**
 
