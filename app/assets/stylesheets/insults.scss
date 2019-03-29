@@ -14,8 +14,6 @@
 .jediFont {
     font-family: 'Jedi';
     color: yellow;
-    line-height: 2rem;
-    font-size: 1.8rem;
     text-decoration: none;
     text-shadow:
 		-2.5px -2.5px 0 black,
@@ -35,13 +33,14 @@
 
 #homeContainerTrans {
     opacity: 0;
-    position: fixed;
+    // position: fixed;
     transition-duration: .3s;
 }
 #homeContainerOpaque {
     opacity: 1;
-    position: fixed;
+    // position: fixed;
     transition-duration: 1s;
+    height: 100vh;
     perspective: 1000px;
 }
 
@@ -98,7 +97,7 @@
     z-index: 3;
     position: absolute;
     left: 0;
-    bottom: -15%;
+    bottom: -15vh;
     width: 100vw;
 }
 
@@ -221,7 +220,7 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-    position: fixed;
+    // position: fixed;
     transition-duration: 1s;
 }
 #indexContainerOpaque {
@@ -232,7 +231,8 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-    position: fixed;
+    // position: fixed;
+    overflow: hidden;
     transition-duration: 1s;
     padding: 0;
     margin: 0;
@@ -258,18 +258,40 @@
 #indexHomeButton {
     z-index: 7;
     position: absolute;
-    bottom: 1vh;
+    top: 1vh;
     left: 2vw;
     text-decoration: none;
+    color: yellow;
+    background-color: black;
+    border: white ;
     font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 5%;
+    margin-left: 25%;
+    justify-self: center;
+    padding: 4px;
+    margin: 10px;
 }
 #indexNewButton {
     z-index: 7;
     position: absolute;
-    bottom: 1vh;
+    top: 1vh;
     right: 2vw;
     text-decoration: none;
+    color: yellow;
+    background-color: black;
+    border: white ;
     font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 5%;
+    margin-left: 25%;
+    justify-self: center;
+    padding: 4px;
+    margin: 10px;
 }
 
 .insultList {
@@ -281,6 +303,7 @@
 
 .insultListItem {
     display: inline-block;
+    font-size: 1.5rem;
 }
 
 .space {
@@ -296,7 +319,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    height: 95vh;
     width: 75vw;
     overflow: hidden;
 }
@@ -373,6 +396,7 @@
     background-color: #36393e;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 
 #showContainerOpaque {
@@ -385,6 +409,62 @@
     background-color: #36393e;
     align-items: center;
     justify-content: center;
+}
+
+#showContentContainer {
+    max-width: 75vw;
+}
+
+#deleteButton {
+    color: yellow;
+    background-color: black;
+    border: white ;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 5%;
+    margin-left: 25%;
+    justify-self: center;
+    text-decoration: none;
+    padding: 4px;
+    margin: 10px;
+}
+
+#editButton {
+    color: yellow;
+    background-color: black;
+    border: white ;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 5%;
+    margin-left: 25%;
+    justify-self: center;
+    text-decoration: none;
+    padding: 4px;
+    margin: 10px;
+}
+
+#showPhrase {
+    color: white;
+}
+
+#phraseContainer {
+    max-width: 75vw;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+#contributorContainer {
+    max-width: 75vw;
+    max-height: 20vh;
+    overflow: auto;
+}
+
+#showContributed {
+    color: lightgrey;
 }
 
 // End of Show elements
@@ -436,11 +516,11 @@
 }
 
 #newEditFormDiv #contributorTextField {
-    width: 25vw;
+    width: 100%;
     font-size: 1.3rem;
     border-radius: 3%;
     box-shadow: 1px 1px 2px yellow;
-    margin-top: 2vh;
+    margin-top: 5%;
     height: 8%;
 }
 
@@ -452,18 +532,28 @@
     font-weight: bolder;
     border-radius: 3%;
     box-shadow: 1px 1px 2px yellow;
-    margin-top: 2vh;
+    margin-top: 5%;
     margin-left: 25%;
     justify-self: center;
 }
 
 #newEditViewBackButton {
-    color: white;
-    text-decoration: none;
     position: absolute;
     bottom: 1vh;
-    font-size: 2rem;
     right: 1vw;
+    color: yellow;
+    background-color: black;
+    border: white ;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 3%;
+    box-shadow: 1px 1px 2px yellow;
+    margin-top: 5%;
+    margin-left: 25%;
+    justify-self: center;
+    text-decoration: none;
+    padding: 4px;
+    margin: 10px;
 }
 
 #pikaWrite {
@@ -481,6 +571,7 @@
 // Home View Media Queries 
 
 @media (orientation: portrait) {
+
     .homeGrass {
         opacity: 1;
         position: absolute;
@@ -535,6 +626,15 @@
 
         // Index View Media Queries
 
+    // #indexContainerOpaque {
+    //     height: 90vh;
+    // }
+
+    .insultList {
+        height: 90vh;
+        margin-top: 13vh;
+    }
+
     #space {
         display: none;
     }
@@ -554,7 +654,7 @@
         position: absolute;
         top: 0;
         width: 95vw;
-        height: 90vh;
+        height: 100vh;
     }
 
     // New and Edit View media queries
@@ -562,15 +662,36 @@
     #newEditFormDiv #addNewEditInsultButton {
         width: 100%;
         margin: 0;
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
-    #newEditFormDiv #contributorTextField {
-        width: 100%;
+    #pikaWrite {
+        bottom: 0;
+        width: 60vw;
     }
+
     // Show View Styles
 
     
 }
 
+
+// Mobile Landscape Queries
+
+@media (orientation: landscape) and (max-width: 850px) and (max-height: 450px) {
+
+    .insultList {
+        width: 50vw;
+        font-size: 1.2rem;
+    }
+
+    // #indexHomeButton {
+    //     bottom: -15vh;
+    // }
+
+    // #indexNewButton {
+    //     bottom: -15vh;
+    // }
+
+}
 

@@ -4,10 +4,10 @@
       <%= form.text_area :phrase, placeholder: "Insult..." %>
       <%= form.text_field :contributor, placeholder: "Your name...", id: "contributorTextField" %>
 
-      <%= form.submit id: "addNewEditInsultButton" %>
+      <%= form.submit id: "addNewEditInsultButton", class: "jediFont" %>
     <% end %>
   </div>
-  <a href="/insults" id="newEditViewBackButton" onClick="newEditFadeOut()">Go Back</a>
+  <a href="/insults" id="newEditViewBackButton" class="jediFont" onClick="newEditFadeOut()">Go Back</a>
   <%= image_tag ("pikaWrite.gif"), id: "pikaWrite"%>
 </div>
 
