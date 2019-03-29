@@ -1,14 +1,10 @@
 # _This is the CobugBotGUI..._
 ---
----
----
 > What is a "CobugBotGUI?"
 ---
 - **The CobugBotGUI is a complimentary web application built for adding content to the CobugBot Discord bot via a user-friendly and easily accessible web interface. The CobugBot is an insult bot and this application allows end-users to add their own insults to the bot's database, from which it pulls via user commands in Discord.** 
 ---
 >SOUNDS AMAZING!!! How can I run the CobugBotGUI myself?
----
----
 ---
 ###### _Before proceeding with these steps ensure that you have Ruby `2.3.7` installed via your preferred version manager. (I like RVM)_
 ---
