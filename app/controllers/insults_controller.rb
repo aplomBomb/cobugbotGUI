@@ -4,6 +4,8 @@ class InsultsController < ApplicationController
   end
   def index
     @insults = Insult.all
+
+    
   end
 
   def show
@@ -56,3 +58,4 @@ class InsultsController < ApplicationController
   end
 
 end
+

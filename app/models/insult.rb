@@ -1,5 +1,7 @@
 class Insult < ApplicationRecord
     validate :you_cannot_be_racist, :must_enter_data
+    after_save :write_csv
+    after_destroy :update_csv_after_destroy
 
     def you_cannot_be_racist
       slurArray = ['nigger', 'nigg3r', 'n1gger', 'n1gg3r', 'jew', 'j3w', 'joo', 'wetback', 
@@ -26,6 +28,26 @@ class Insult < ApplicationRecord
         errors.add(:contributor, "Your name needs at least 3 characters")
     end
   end
+
+  def write_csv
+
+    CSV.open("insult.csv", "wb") do |csv|
+      csv << Insult.attribute_names
+      Insult.find_each do |insult|
+        csv << insult.attributes.values
+      end
+    end
+  end
+
+  def update_csv_after_destroy
+    CSV.open("insult.csv", "wb") do |csv|
+      csv << Insult.attribute_names
+      Insult.find_each do |insult|
+        csv << insult.attributes.values
+      end
+    end
+  end
+
 end
 
 
